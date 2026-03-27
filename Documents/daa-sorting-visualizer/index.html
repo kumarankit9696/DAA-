@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAA Mini Project - Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sorting Algorithm Visualizer</h1>
+      <p>DAA Mini Project using HTML, CSS and JavaScript</p>
+    </header>
+
+    <section class="controls glass">
+      <div class="control-group">
+        <label for="algorithm">Algorithm</label>
+        <select id="algorithm">
+          <option value="bubble">Bubble Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="quick">Quick Sort</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="size">Array Size: <span id="sizeValue">35</span></label>
+        <input type="range" id="size" min="10" max="80" value="35" />
+      </div>
+
+      <div class="control-group">
+        <label for="speed">Speed: <span id="speedValue">60</span></label>
+        <input type="range" id="speed" min="1" max="100" value="60" />
+      </div>
+
+      <div class="buttons">
+        <button id="generateBtn">Generate New Array</button>
+        <button id="startBtn" class="primary">Start Sorting</button>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Selected Algorithm</h3>
+        <p id="algoName">Bubble Sort</p>
+      </div>
+      <div class="card">
+        <h3>Time Complexity</h3>
+        <p id="timeComplexity">Best: O(n), Avg/Worst: O(n²)</p>
+      </div>
+      <div class="card">
+        <h3>Space Complexity</h3>
+        <p id="spaceComplexity">O(1)</p>
+      </div>
+    </section>
+
+    <section class="legend glass">
+      <div class="legend-item">
+        <span class="dot normal"></span> Normal
+      </div>
+      <div class="legend-item">
+        <span class="dot compare"></span> Comparing
+      </div>
+      <div class="legend-item">
+        <span class="dot active"></span> Swapping / Active
+      </div>
+      <div class="legend-item">
+        <span class="dot sorted"></span> Sorted
+      </div>
+    </section>
+
+    <div id="arrayContainer" class="array-container"></div>
+
+    <footer>
+      <p>Made for DAA Mini Project Presentation</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
